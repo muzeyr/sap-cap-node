@@ -1,0 +1,8 @@
+COLUMN TABLE sap_capire_bookshop_Books_texts (
+  ID_texts NVARCHAR(36) NOT NULL,
+  locale NVARCHAR(14),
+  ID INTEGER,
+  title NVARCHAR(111),
+  descr NVARCHAR(1111),
+  PRIMARY KEY(ID_texts)
+)

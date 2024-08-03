@@ -1,0 +1,8 @@
+COLUMN TABLE sap_capire_bookshop_User (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP,
+  deletedAt TIMESTAMP,
+  FullName NVARCHAR(1024),
+  PRIMARY KEY(ID)
+)

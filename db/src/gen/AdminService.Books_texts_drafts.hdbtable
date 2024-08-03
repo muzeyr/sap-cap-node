@@ -1,0 +1,14 @@
+COLUMN TABLE AdminService_Books_texts_drafts (
+  ID_texts NVARCHAR(36) NOT NULL,
+  locale NVARCHAR(14) NULL,
+  ID INTEGER NULL,
+  title NVARCHAR(111) NULL,
+  descr NVARCHAR(1111) NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(ID_texts)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN AdminService_DraftAdministrativeData AS DraftAdministrativeData ON (DraftAdministrativeData.DraftUUID = DraftAdministrativeData_DraftUUID)
+)

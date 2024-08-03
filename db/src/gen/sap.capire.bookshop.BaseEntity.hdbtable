@@ -1,0 +1,7 @@
+COLUMN TABLE sap_capire_bookshop_BaseEntity (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP,
+  deletedAt TIMESTAMP,
+  PRIMARY KEY(ID)
+)

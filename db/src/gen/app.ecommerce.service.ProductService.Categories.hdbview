@@ -1,0 +1,5 @@
+VIEW app_ecommerce_service_ProductService_Categories AS SELECT
+  Categories_0.ID,
+  Categories_0.Name,
+  Categories_0.Description
+FROM sap_capire_bookshop_Categories AS Categories_0

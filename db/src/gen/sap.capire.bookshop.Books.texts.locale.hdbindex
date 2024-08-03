@@ -1,0 +1,1 @@
+UNIQUE INVERTED INDEX sap_capire_bookshop_Books_texts_locale ON sap_capire_bookshop_Books_texts (locale, ID)

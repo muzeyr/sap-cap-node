@@ -1,0 +1,9 @@
+VIEW app_ecommerce_service_ProductService_Products AS SELECT
+  Products_0.ID,
+  Products_0.createdAt,
+  Products_0.updatedAt,
+  Products_0.deletedAt,
+  Products_0.Name,
+  Products_0.Description,
+  Products_0.Price
+FROM sap_capire_bookshop_Products AS Products_0

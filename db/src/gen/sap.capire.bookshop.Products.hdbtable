@@ -1,0 +1,10 @@
+COLUMN TABLE sap_capire_bookshop_Products (
+  ID NVARCHAR(36) NOT NULL,
+  createdAt TIMESTAMP,
+  updatedAt TIMESTAMP,
+  deletedAt TIMESTAMP,
+  Name NVARCHAR(512),
+  Description NVARCHAR(1024),
+  Price DECIMAL(10, 2),
+  PRIMARY KEY(ID)
+)

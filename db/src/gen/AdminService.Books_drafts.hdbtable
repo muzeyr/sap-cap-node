@@ -1,0 +1,27 @@
+COLUMN TABLE AdminService_Books_drafts (
+  createdAt TIMESTAMP NULL,
+  createdBy NVARCHAR(255) NULL,
+  modifiedAt TIMESTAMP NULL,
+  modifiedBy NVARCHAR(255) NULL,
+  ID INTEGER NOT NULL,
+  title NVARCHAR(111) NULL,
+  descr NVARCHAR(1111) NULL,
+  author_ID INTEGER NULL,
+  genre_ID INTEGER NULL,
+  stock INTEGER NULL,
+  price DECIMAL NULL,
+  currency_code NVARCHAR(3) NULL,
+  image BLOB NULL,
+  IsActiveEntity BOOLEAN,
+  HasActiveEntity BOOLEAN,
+  HasDraftEntity BOOLEAN,
+  DraftAdministrativeData_DraftUUID NVARCHAR(36) NOT NULL,
+  PRIMARY KEY(ID)
+) WITH ASSOCIATIONS (
+  MANY TO ONE JOIN AdminService_Authors AS author ON (author.ID = author_ID),
+  MANY TO ONE JOIN AdminService_Genres AS genre ON (genre.ID = genre_ID),
+  MANY TO ONE JOIN AdminService_Currencies AS currency ON (currency.code = currency_code),
+  MANY TO MANY JOIN AdminService_Books_texts_drafts AS texts ON (texts.ID = ID),
+  MANY TO ONE JOIN AdminService_Books_texts_drafts AS localized ON (localized.ID = ID AND localized.locale = SESSION_CONTEXT('LOCALE')),
+  MANY TO ONE JOIN AdminService_DraftAdministrativeData AS DraftAdministrativeData ON (DraftAdministrativeData.DraftUUID = DraftAdministrativeData_DraftUUID)
+)

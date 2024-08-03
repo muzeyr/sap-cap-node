@@ -1,0 +1,7 @@
+VIEW app_ecommerce_service_ProductService_User AS SELECT
+  User_0.ID,
+  User_0.createdAt,
+  User_0.updatedAt,
+  User_0.deletedAt,
+  User_0.FullName
+FROM sap_capire_bookshop_User AS User_0
