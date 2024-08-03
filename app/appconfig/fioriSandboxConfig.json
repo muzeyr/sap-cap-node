@@ -36,6 +36,14 @@
                     "title": "Manage Books",
                     "targetURL": "#Books-manage"
                   }
+                },
+                {
+                  "id": "ManageBooks1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "title": "Manage Books v3",
+                    "targetURL": "#Books-manage"
+                  }
                 }
               ]
             }
@@ -84,6 +92,20 @@
               "resolutionResult": {
                 "applicationType": "SAPUI5",
                 "additionalInformation": "SAPUI5.Component=books",
+                "url": "admin-books/webapp"
+              }
+            },
+            "Products": {
+              "semanticObject": "Products",
+              "action": "manage",
+              "title": "Manage Products",
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              },
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=products",
                 "url": "admin-books/webapp"
               }
             }
